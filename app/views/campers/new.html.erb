@@ -2,9 +2,11 @@
 <%= form_for @camper do |f| %>
 
     <% if @camper.errors.any? %>
+    <ul>
         <% @camper.errors.full_messages.each do |msg| %>
-            <%= msg %>
+            <li><%= msg %></li>
         <% end%>
+        </ul>
     <% end%>
 
     <p>

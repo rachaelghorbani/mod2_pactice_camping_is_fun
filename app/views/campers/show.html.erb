@@ -5,8 +5,11 @@
 <p> List of Activities:
     <ul>
         <% @camper.activities.each do |activity| %>
-            <li><%= activity.name%> | </li>
+            <li> <%= activity.name%></li>
         <% end%>
     </ul>
 </p>
+
+<!-- alternative to having to select both a camper and activity. Allows campers to add an activity from their own page-->
 <%= render 'form' %>
+<%= button_to "Delete Camper", camper_path(@camper), method: :delete %>
