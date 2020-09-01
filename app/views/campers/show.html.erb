@@ -1,0 +1,12 @@
+<h1><%= "#{@camper.name}'s" %> Page:</h1>
+<p>
+    Age: <%= @camper.age %>
+</p>
+<p> List of Activities:
+    <ul>
+        <% @camper.activities.each do |activity| %>
+            <li><%= activity.name%> | </li>
+        <% end%>
+    </ul>
+</p>
+<%= render 'form' %>

@@ -1,0 +1,14 @@
+<%= form_for @signup do |f| %>
+<%= f.hidden_field :camper_id, value: @camper.id %>
+    <p>
+        <%= f.label "Activity" %>
+        <%= f.collection_select :activity_id, Activity.all, :id, :name %>
+    </p>
+    <p>
+        <%= f.label "Time" %>
+        <%= f.number_field :time %>
+    </p>
+    
+
+    <%= f.submit "Add Activity!" %>
+<% end%>
